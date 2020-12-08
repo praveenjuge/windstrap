@@ -1,0 +1,44 @@
+{
+  "name": "windstrap",
+  "version": "0.0.1",
+  "description": "Tailwind CSS with Bootstrap JS",
+  "main": "index.js",
+  "author": "praveenjuge",
+  "license": "MIT",
+  "homepage": "https://github.com/praveenjuge/windstrap#readme",
+  "keywords": [
+    "tailwind",
+    "tailwindcss",
+    "tailwindcss-plugin",
+    "css",
+    "components",
+    "bootstrap"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenjuge/windstrap.git"
+  },
+  "bugs": {
+    "url": "https://github.com/praveenjuge/windstrap/issues"
+  },
+  "files": [
+    "src",
+    "index.js"
+  ],
+  "scripts": {
+    "start": "cross-env NODE_ENV=development concurrently \"nodemon -e js,html,md --exec 'npm run tailwind'\" \"cd docs && hugo server --disableFastRender\"",
+    "production": "cross-env NODE_ENV=production npm run tailwind && cd docs && hugo --minify",
+    "tailwind": "./node_modules/tailwindcss/lib/cli.js build -o ./docs/static/build.css --config ./docs/tailwind.config.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.1.0",
+    "concurrently": "^5.3.0",
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.6",
+    "postcss": "^8.2.0",
+    "tailwindcss": "^2.0.1"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^2.0.1"
+  }
+}

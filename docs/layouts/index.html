@@ -1,0 +1,15 @@
+{{ define "main"}}
+
+<section class="container mx-auto pt-16 pb-32 px-4">
+  <div class="grid grid-cols-1 lg:grid-cols-4 gap-16">
+    <aside class="prose max-w-full">
+      <div class="relative lg:sticky top-0 pt-1">{{ .TableOfContents }}</div>
+    </aside>
+    <article class="prose max-w-full col-span-3 mt-5 font-medium">
+      <h1>{{ .Title }}</h1>
+      {{ .Content }}
+    </article>
+  </div>
+</section>
+
+{{ end }}
