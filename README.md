@@ -8,12 +8,6 @@ Tailwind CSS with Bootstrap JS
 npm install windstrap --save
 ```
 
-## Usage
-
-### For CSS
-
-Requires Tailwind CSS 2. Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
-
 Require the installed plugin directly to your Tailwind config:
 
 ```js
@@ -21,9 +15,15 @@ Require the installed plugin directly to your Tailwind config:
 plugins: [require("windstrap")],
 ```
 
+## Usage
+
+### For CSS
+
+Requires Tailwind CSS 2 which is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
+
 ### For JS
 
-Requires Bootstrap JS 5. Bootstrap JS is not included in this package. Learn how to [install bootstrap js here](https://getbootstrap.com/docs/5.0/getting-started/introduction/#js).
+Requires Bootstrap JS 5 which is not included in this package. Learn how to [install bootstrap js here](https://getbootstrap.com/docs/5.0/getting-started/introduction/#js).
 
 ## Documentation
 
@@ -47,7 +47,7 @@ Then clone the repo, install dependencies, and start the server locally.
 
 ```sh
 git clone https://github.com/praveenjuge/windstrap.git
-cd kutty
+cd windstrap
 npm install
 npm start
 ```

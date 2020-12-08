@@ -40,5 +40,8 @@
   },
   "peerDependencies": {
     "tailwindcss": "^2.0.1"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.3.1"
   }
 }

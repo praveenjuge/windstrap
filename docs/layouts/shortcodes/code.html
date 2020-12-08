@@ -1,0 +1,5 @@
+<!-- To display the component -->
+<div class="p-6 -mb-4 overflow-x-auto overflow-y-visible bg-gray-200 rounded">{{ .Inner }}</div>
+
+<!-- To display the code -->
+<div class="mb-10 outline-none">{{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}</div>

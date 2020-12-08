@@ -1,151 +1,108 @@
 ---
-title: "Tailwind CSS with Bootstrap JS"
+title: "Windstrap"
 ---
 
-## Get Started
+Tailwind CSS with Bootstrap JS
 
-Hellonext API V3 is an organization based access. Use this to query for latest posts, submit a post and more.
+## Installation
 
-First, you will need to obtain an API token.
+```sh
+npm install windstrap --save
+```
 
-1. Navigate to the "Advanced Settings" page. Dashboard > Settings > Advanced > API Key
-
-2. Click on the “Generate” button in the API Key section.
-
-![Generate API Token](image1.png)
-
-3. Copy the generated token. (In this case it is “3IIlJZNFukq3BRh76_aw4Q”)
-
-![Copy API Token](image2.png)
-
-4. This token will need to be sent in the header section of every API request.
+Require the installed plugin directly to your Tailwind config:
 
 ```js
-header[“API-KEY”] = “3IIlJZNFukq3BRh76_aw4Q”
+// tailwind.config.js
+plugins: [require("windstrap")],
 ```
 
-## API Documentation
+## Usage
 
-### Organization Information
+### For CSS
 
-This endpoint helps you extract organization information such as name, profile picture, list of buckets and more.
+Requires Tailwind CSS 2 which is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
 
-**Request**
+### For JS
 
-GET /api/v3/organizations/info
+Requires Bootstrap JS 5 which is not included in this package. Learn how to [install bootstrap js here](https://getbootstrap.com/docs/5.0/getting-started/introduction/#js).
 
-**Request Header**
+## Alert
 
-API-KEY 3IIlJZNFukq3BRh76_aw4Q
+{{< code html >}}
 
-**Response**
+<div class="relative p-3.5 rounded bg-gray-50 alert alert-dismissible fade show" role="alert">
+  <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{{< /code >}}
 
-```json
-{
-  "success": true,
-  "organization": {
-    "id": xxx,
-    "name": "hellonext",
-    "display_name": "Hellonext",
-    "description": "",
-    "url": null,
-    "profile": null
-  },
-  "buckets": [
-    {
-      "id": xxx,
-      "name": "ABC",
-      "default": false
-    },
-    {
-      "id": xxx,
-      "name": "XYZ",
-      "default": false
-    }
-  ]
-}
-```
+## Toast
 
-### Submit Post
+{{< code html >}}
 
-A post can be submitted by sending the required attributes such as title, description, and bucket.
+<div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-header">
+    <img src="/placeholder.jpg" class="w-5 mr-2 rounded" alt="...">
+    <strong class="mr-auto">Bootstrap</strong>
+    <small>11 mins ago</small>
+    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+  </div>
+  <div class="toast-body">Hello, world! This is a toast message.</div>
+</div>
+{{< /code >}}
 
-**Request**
+{{< code html >}}
 
-POST /api/v3/feature_requests/submit
+<div aria-live="polite" aria-atomic="true" class="relative h-56">
+  <div class="absolute top-0 right-0 toast-container">
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="/placeholder.jpg" class="w-5 mr-2 rounded" alt="...">
+        <strong class="mr-auto">Bootstrap</strong>
+        <small>just now</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">See? Just like this.</div>
+    </div>
+    <div class="toast fade show" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <img src="/placeholder.jpg" class="w-5 mr-2 rounded" alt="...">
+        <strong class="mr-auto">Bootstrap</strong>
+        <small>2 seconds ago</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">Heads up, toasts will stack automatically</div>
+    </div>
+  </div>
+</div>
+{{< /code >}}
 
-**Request Header**
+{{< code html >}}
 
-API-KEY 3IIlJZNFukq3BRh76_aw4Q
+<div class="flex items-center text-white bg-indigo-700 border-0 fade show toast" role="alert" aria-live="assertive" aria-atomic="true">
+  <div class="toast-body">Hello, world! This is a toast message.</div>
+  <button type="button" class="ml-auto mr-3 btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+</div>
+{{< /code >}}
 
-**Response**
+## Tooltips
 
-```json
-{
-  "id": xxx,
-  "slug": "abc",
-  "title": "ABC",
-  "description": "ABC ABC ABC",
-  "attachments": [],
-  "submitter": "Swaathi Kakarla",
-  "status": "under_review",
-  "bucket": "Internal Suggestions",
-  "url": "https://feedback.hellonext.co/features/xxx",
-  "votes_count": 1,
-  "comments_count": 0,
-  "created_at": "2020-07-15T12:51:06.000+05:30",
-  "updated_at": "2020-07-15T12:51:06.000+05:30"
-}
-```
+{{< code html >}}
 
-### View Latest Posts
-
-Fetch latest submitted posts with a paginated response.
-
-**Request**
-
-GET /api/v3/feature_requests/latest
-
-**Request Header**
-
-API-KEY 3IIlJZNFukq3BRh76_aw4Q
-
-**Response**
-
-```json
-{
-  "success": true,
-  "feature_requests": [
-    {
-      "id": xxx,
-      "slug": "pqr",
-      "title": "PQR",
-      "description": "PQR PQR",
-      "attachments": [],
-      "submitter": "Praveen Juge",
-      "status": "in_progress",
-      "bucket": "Feature Requests",
-      "url": "https://feedback.hellonext.co/features/pqr",
-      "votes_count": 3,
-      "comments_count": 1,
-      "created_at": "2020-06-30T12:36:36.000+05:30",
-      "updated_at": "2020-07-01T10:18:14.000+05:30"
-    },
-    {
-      "id": xxx,
-      "slug": "abc",
-      "title": "ABC",
-      "description": "ABC ABC",
-      "attachments": [],
-      "submitter": "Swaathi Kakarla",
-      "status": "in_progress",
-      "bucket": "Feature Requests",
-      "url": "https://feedback.hellonext.co/features/abc",
-      "votes_count": 1,
-      "comments_count": 0,
-      "created_at": "2020-06-30T12:36:36.000+05:30",
-      "updated_at": "2020-07-01T10:18:14.000+05:30"
-    }
-  ]
-}
-```
+<button type="button" class="px-3 py-2 text-sm font-medium bg-white rounded-md shadow-sm hover:bg-gray-50" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+  Tooltip on top
+</button>
+<button type="button" class="px-3 py-2 text-sm font-medium bg-white rounded-md shadow-sm hover:bg-gray-50" data-bs-toggle="tooltip" data-bs-placement="right" title="Tooltip on right">
+  Tooltip on right
+</button>
+<button type="button" class="px-3 py-2 text-sm font-medium bg-white rounded-md shadow-sm hover:bg-gray-50" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tooltip on bottom">
+  Tooltip on bottom
+</button>
+<button type="button" class="px-3 py-2 text-sm font-medium bg-white rounded-md shadow-sm hover:bg-gray-50" data-bs-toggle="tooltip" data-bs-placement="left" title="Tooltip on left">
+  Tooltip on left
+</button>
+<button type="button" class="px-3 py-2 text-sm font-medium bg-white rounded-md shadow-sm hover:bg-gray-50" data-bs-toggle="tooltip" data-bs-html="true" title="<em>Tooltip</em> <u>with</u> <b>HTML</b>">
+  Tooltip with HTML
+</button>
+{{< /code >}}
