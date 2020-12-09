@@ -15,7 +15,16 @@ Require the installed plugin directly to your Tailwind config:
 plugins: [require("windstrap")],
 ```
 
-## Usage
+Tailwind purges everything by default. Some bootstrap classes like tooltips will be left out during the purge so add the following to purge options in your tailwind config. This will make sure all components are not purged.
+
+```js
+// tailwind.config.js
+purge: {
+  layers: ["base", "utilities"],
+},
+```
+
+## Requirements
 
 ### For CSS
 
@@ -23,7 +32,7 @@ Requires Tailwind CSS 2 which is not included in this package. Learn how to [ins
 
 ### For JS
 
-Requires Bootstrap JS 5 which is not included in this package. Learn how to [install bootstrap js here](https://getbootstrap.com/docs/5.0/getting-started/introduction/#js).
+Requires Bootstrap JS 5.0.0-beta1 which is not included in this package. Learn how to [install bootstrap js here](https://getbootstrap.com/docs/5.0/getting-started/introduction/#js).
 
 ## Documentation
 

@@ -85,7 +85,7 @@ module.exports = Tooltip = () => ({
     borderLeftColor: "#000",
   },
   ".tooltip-inner": {
-    maxWidth: "200px",
+    "max-width": "200px",
     padding: "0.25rem 0.5rem",
     color: "#fff",
     textAlign: "center",

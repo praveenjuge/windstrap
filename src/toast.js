@@ -1,7 +1,7 @@
 module.exports = Toast = () => ({
   ".toast": {
     width: "350px",
-    maxWidth: "100%",
+    "max-width": "100%",
     fontSize: "0.875rem",
     pointerEvents: "auto",
     backgroundColor: "rgba(255, 255, 255, 0.85)",
@@ -18,7 +18,7 @@ module.exports = Toast = () => ({
   },
   ".toast-container": {
     width: "max-content",
-    maxWidth: "100%",
+    "max-width": "100%",
     pointerEvents: "none",
   },
   ".toast-container > :not(:last-child)": {

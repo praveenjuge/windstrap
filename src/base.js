@@ -2,12 +2,23 @@ module.exports = Base = () => ({
   ".fade": {
     transition: "opacity .15s linear",
   },
+  ".fade:not(.show)": {
+    opacity: 0,
+  },
+  ".collapse:not(.show)": {
+    display: "none",
+  },
+  ".collapsing": {
+    height: 0,
+    overflow: "hidden",
+    transition: "height 0.35s ease",
+  },
   "@media (prefers-reduced-motion: reduce)": {
-    ".fade": {
+    ".collapsing": {
       transition: "none",
     },
-    ".fade:not(.show)": {
-      opacity: 0,
+    ".fade": {
+      transition: "none",
     },
   },
   ".alert-dismissible": {

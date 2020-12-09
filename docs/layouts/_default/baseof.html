@@ -3,8 +3,8 @@
   <head itemscope itemtype="{{ .Site.BaseURL }}">
     {{ partial "meta" . }}
   </head>
-  <body class="relative">
-    <main class="container px-0 pt-0 pb-16 mx-auto md:pt-16 md:px-4">{{ block "main" . }}{{ end }}</main>
+  <body class="container relative px-0 pt-0 pb-0 mx-auto md:pb-16 md:pt-16 md:px-4">
+    {{ block "main" . }}{{ end }}
 
     <div id="body_toast" class="absolute toast bottom-6 right-6" role="alert" aria-live="assertive" aria-atomic="true">
       <div class="toast-header">
