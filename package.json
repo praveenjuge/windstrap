@@ -1,6 +1,6 @@
 {
   "name": "windstrap",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tailwind CSS with Bootstrap JS",
   "main": "index.js",
   "author": "praveenjuge",
