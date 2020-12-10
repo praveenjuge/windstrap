@@ -105,6 +105,13 @@ Requires Bootstrap JS 5.0.0-beta1 which is not included in this package. Learn h
 
 {{< /code >}}
 
+## Popovers
+
+{{< code html >}}
+
+<button type="button" class="p-2.5 text-sm font-medium bg-white rounded-md shadow-sm hover:bg-gray-100" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+{{< /code >}}
+
 ## Toast
 
 {{< code html >}}
