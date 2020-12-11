@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#" class="text-gray-900 bg-gray-50">
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#" class="text-gray-900 bg-white">
   <head itemscope itemtype="{{ .Site.BaseURL }}">
     {{ partial "meta" . }}
   </head>
-  <body class="container relative px-0 pt-0 pb-0 mx-auto md:pb-16 md:pt-16 md:px-4">
+  <body class="container relative grid grid-cols-1 px-0 py-0 mx-auto md:py-16 md:px-4 md:grid-cols-5">
     {{ block "main" . }}{{ end }} {{ partial "js" . }}
   </body>
 </html>

@@ -46,6 +46,25 @@ Requires Bootstrap JS 5.0.0-beta1 which is not included in this package. Learn h
 </div>
 {{< /code >}}
 
+## Buttons
+
+Tailwind needs an `active` class with your own color. Learn more about adding [custom styles here](https://tailwindcss.com/docs/extracting-components#extracting-component-classes-with-apply).
+
+```css
+/* tailwind.css */
+@layer components {
+  .active {
+    @apply bg-indigo-900 !important;
+  }
+}
+```
+
+{{< code html >}}
+<button type="button" class="inline-flex px-4 py-2 my-2 text-sm font-medium text-white transition bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+<button type="button" class="inline-flex px-4 py-2 my-2 text-sm font-medium text-white transition bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+<button type="button" class="inline-flex px-4 py-2 my-2 text-sm font-medium text-white transition bg-indigo-400 rounded-md shadow-sm " disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+{{< /code >}}
+
 ## Collapse
 
 {{< code html >}}
@@ -102,7 +121,26 @@ Requires Bootstrap JS 5.0.0-beta1 which is not included in this package. Learn h
     </div>
   </div>
 </div>
+{{< /code >}}
 
+## Navbar
+
+Responsive `navbar-collapse` classes are available for specifying collapsible breakpoint.
+
+{{< code html >}}
+
+<nav class="relative flex flex-wrap items-center justify-between px-4 py-2 bg-white rounded">
+  <a href="#" class="flex mr-4">Navbar</a>
+  <button class="inline-flex px-3 py-2 text-sm font-medium bg-white border rounded-md shadow-sm lg:hidden navbar-toggler hover:bg-gray-50" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><svg class="flex-shrink-0 w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" /></svg></button>
+  <div class="items-center justify-start w-full flex-nowrap lg:justify-end lg:w-auto collapse lg:navbar-collapse" id="navbarNav">
+    <nav class="flex flex-col mt-4 space-x-0 space-y-2 lg:mt-0 lg:space-x-1 lg:space-y-0 lg:flex-row">
+      <button class="inline-flex px-3 py-2 text-sm font-medium text-white bg-indigo-600 rounded" aria-current="page" href="#">Home</button>
+      <button class="inline-flex px-3 py-2 text-sm font-medium bg-white rounded hover:bg-gray-100" href="#">Features</button>
+      <button class="inline-flex px-3 py-2 text-sm font-medium bg-white rounded hover:bg-gray-100" href="#">Pricing</button>
+      <button class="inline-flex px-3 py-2 text-sm font-medium bg-gray-100 rounded pointer-events-none" href="#" tabindex="-1" aria-disabled="true">Disabled</button>
+    </nav>
+  </div>
+</nav>
 {{< /code >}}
 
 ## Popovers
