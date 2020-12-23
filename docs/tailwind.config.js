@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       typography: {
-        DEFAULT: {
+        sm: {
           css: {
             a: {
               textDecoration: "none",

@@ -60,9 +60,9 @@ Tailwind needs an `active` class with your own color. Learn more about adding [c
 ```
 
 {{< code html >}}
-<button type="button" class="inline-flex px-4 py-2 my-2 text-sm font-medium text-white transition bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700" data-bs-toggle="button" autocomplete="off">Toggle button</button>
-<button type="button" class="inline-flex px-4 py-2 my-2 text-sm font-medium text-white transition bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
-<button type="button" class="inline-flex px-4 py-2 my-2 text-sm font-medium text-white transition bg-indigo-400 rounded-md shadow-sm " disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
+<button type="button" class="inline-flex px-4 py-2 my-1 text-sm font-medium text-white transition bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700" data-bs-toggle="button" autocomplete="off">Toggle button</button>
+<button type="button" class="inline-flex px-4 py-2 my-1 text-sm font-medium text-white transition bg-indigo-600 rounded-md shadow-sm hover:bg-indigo-700 active" data-bs-toggle="button" autocomplete="off" aria-pressed="true">Active toggle button</button>
+<button type="button" class="inline-flex px-4 py-2 my-1 text-sm font-medium text-white transition bg-indigo-400 rounded-md shadow-sm " disabled data-bs-toggle="button" autocomplete="off">Disabled toggle button</button>
 {{< /code >}}
 
 ## Collapse

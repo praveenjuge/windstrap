@@ -1,5 +1,5 @@
 <!-- To display the component -->
-<section class="w-full p-5 -mb-5 overflow-y-visible bg-gray-200 rounded-md">{{ .Inner }}</section>
+<section class="w-full p-4 -mb-5 overflow-y-visible bg-gray-200 rounded-md">{{ .Inner }}</section>
 
 <!-- To display the code -->
 {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}

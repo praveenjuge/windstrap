@@ -1,11 +1,31 @@
 {{ define "main"}}
 
-<aside class="hidden px-0 prose md:block">
-  <section class="sticky top-5">{{ .TableOfContents }}</section>
+<aside class="hidden px-0 prose-sm prose md:block">
+  <nav id="TableOfContents" class="sticky top-5">
+    <ul>
+      <li><a href="#installation">Installation</a></li>
+      <li>
+        <a href="#requirements">Requirements</a>
+        <ul>
+          <li><a href="#for-css">For CSS</a></li>
+          <li><a href="#for-js">For JS</a></li>
+        </ul>
+      </li>
+      <li><a href="#alert">Alert</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#collapse">Collapse</a></li>
+      <li><a href="#dropdowns">Dropdowns</a></li>
+      <li><a href="#modal">Modal</a></li>
+      <li><a href="#navbar">Navbar</a></li>
+      <li><a href="#popovers">Popovers</a></li>
+      <li><a href="#toast">Toast</a></li>
+      <li><a href="#tooltips">Tooltips</a></li>
+    </ul>
+  </nav>
 </aside>
-<main class="col-span-4 px-5 py-12 md:py-5 sm:px-12">
+<main class="col-span-6 px-5 py-12 md:py-5 sm:px-12">
   <header class="flex items-center justify-between mb-8">
-    <h1 class="text-3xl font-extrabold sm:text-4xl">{{ .Title }}</h1>
+    <h1 class="text-2xl font-extrabold sm:text-4xl">{{ .Title }}</h1>
     <a
       href="https://github.com/praveenjuge/windstrap"
       target="_blank"
@@ -19,7 +39,7 @@
       GitHub
     </a>
   </header>
-  <article class="max-w-full prose prose-indigo">{{ .Content }}</article>
+  <article class="max-w-full prose-sm prose prose-indigo">{{ .Content }}</article>
   <footer class="grid grid-cols-1 gap-4 pt-10 mt-10 border-t border-gray-200 lg:grid-cols-2">
     <a
       href="https://github.com/praveenjuge/windstrap/discussions"
